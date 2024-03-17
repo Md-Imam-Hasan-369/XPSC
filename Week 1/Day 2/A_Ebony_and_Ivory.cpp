@@ -11,24 +11,20 @@ int main()
     Code By Imam
     int a,b,c;
     cin>>a>>b>>c;
-    bool ok=false;
-    for(int i=0;i<=100;i++)
+    for(int y=0;y<=c/b;y++)
     {
-        for(int j=0;j<=100;j++)
+        int x = (c-y*b)/a;
+        if(a*x+b*y==c && x>=0)
         {
-            int x = (i*a) + (j*b);
-            if(x<=c)
-            {
-                if(x==c)
-                {
-                    ok=true;
-                    break;
-                }
-            }
-            else break;
+            cout<<"Yes"<<"\n";
+            return 0;
         }
     }
-    if(ok) cout<<"Yes"<<"\n";
-    else cout<<"No"<<"\n";
+    cout<<"No"<<"\n";
     return 0;
 }
+/*
+//math equation-> ax+by=c
+y er different different valuer jnne x er different value ashbe.. x er value jodi non negative integer hoy taahole true nahole false..
+tar mane y er upor loop colbe
+*/
