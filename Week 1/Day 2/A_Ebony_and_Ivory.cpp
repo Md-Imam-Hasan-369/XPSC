@@ -45,9 +45,10 @@ int main()
     int a,b,c;
     cin>>a>>b>>c;
     bool ok=false;
-    for(int i=0;i*a<=c;i++)
+    for(int i=0;;i++)
     {
-        for(int j=0;j*b<=c;j++)
+        if(i*a>c)break;
+        for(int j=0;;j++)
         {
             int x = (i*a) + (j*b);
             if(x<=c)
