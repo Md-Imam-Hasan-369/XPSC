@@ -43,4 +43,49 @@ int main()
     }
     return 0;
 }
+
 //it's possible to solve using multiset
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+//Speed
+#define Code ios_base::sync_with_stdio(false);
+#define By cin.tie(NULL);
+#define Imam cout.tie(NULL);
+
+int main()
+{
+    Code By Imam
+    int t; cin>>t;
+    while(t--)
+    {
+        int n; cin>>n;
+        multiset<int> ml;
+        for(int i=1;i<=n;i++)
+        {
+            int x; cin>>x;
+            ml.insert(x);
+        }
+        int ans=0;
+        while(!ml.empty())
+        {
+            int curr = *ml.begin();
+            while(true)
+            {
+                auto nxt = ml.find(curr+1);
+                if(nxt == ml.end())
+                {
+                    ml.erase(ml.find(curr));
+                    ans++;
+                    break;
+                }
+                ml.erase(ml.find(curr));
+                curr++;
+            }
+        }
+        cout<<ans<<endl;
+    }
+    return 0;
+}
