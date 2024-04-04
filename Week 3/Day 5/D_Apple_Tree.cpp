@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#define ll long long
 using namespace std;
 
 //Speed
@@ -7,8 +8,8 @@ using namespace std;
 #define Imam cout.tie(NULL);
 
 const int N = 1e6;
-vector<int> adj[N];
-vector<int> leaf_cnt;
+vector<ll> adj[N];
+vector<ll> leaf_cnt;
 
 void dfs(int s,int par)//1 -1
 {
@@ -52,7 +53,7 @@ int main()
         {
             int x,y;
             cin>>x>>y;
-            int ans = leaf_cnt[x] * leaf_cnt[y];
+            ll ans = leaf_cnt[x] * leaf_cnt[y];
             cout<<ans<<"\n";
         }
     }
