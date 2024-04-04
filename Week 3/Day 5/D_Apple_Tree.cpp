@@ -10,23 +10,6 @@ const int N = 1e6;
 vector<int> adj[N];
 vector<int> leaf_cnt;
 
-void dfs(int s,int par)//2 1
-{
-    bool flag=false;
-    for(auto child:adj[s])
-    {
-        if(child != par)
-        {
-            flag = true;
-            dfs(child,s);
-            leaf_cnt[s] += leaf_cnt[child];
-        }
-    }
-    if(!flag)
-    {
-        leaf_cnt[s] = 1;
-    }
-}
 void dfs(int s,int par)//1 -1
 {
     bool flag=false;
