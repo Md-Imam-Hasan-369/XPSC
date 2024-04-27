@@ -30,19 +30,19 @@ int main()
                     cnt += mid-ar[i];
                 }
             }
-            return cnt>=x;
+            return cnt<=x;
         };
 
         ll l=1, r=1e18,ans;
         while(l<=r)
         {
-            ll mid = l+(r-l)/2;
+            ll mid = (l+r)/2;
             if(ok(mid))
             {
                 ans = mid;
-                r = mid-1;
+                l = mid+1;
             }
-            else l = mid+1;
+            else r = mid-1;
         }
         cout<<ans<<'\n';
     }
