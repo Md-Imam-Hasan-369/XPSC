@@ -33,7 +33,7 @@ int main()
             return cnt<=x;
         };
 
-        ll l=1, r=1e18,ans;
+        ll l=1, r=1e10,ans;
         while(l<=r)
         {
             ll mid = (l+r)/2;
